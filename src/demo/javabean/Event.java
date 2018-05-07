@@ -2,13 +2,17 @@ package demo.javabean;
 
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlAccessType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "event", propOrder = { "processApp", "snapshot", "ucaname", })
+@XmlType(name = "event", propOrder = { "processApp", "snapshot", "ucaname", "value"})
 public class Event {
 	
+	@XmlElement
+	private String value;
+	 
 	@XmlAttribute
 	private String processApp;
 	
@@ -40,6 +44,14 @@ public class Event {
 
 	public void setUcaname(String ucaname) {
 		this.ucaname = ucaname;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
 	}
 	
 }

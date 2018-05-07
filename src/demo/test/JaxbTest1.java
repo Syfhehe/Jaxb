@@ -5,18 +5,19 @@ import java.util.List;
 
 import demo.JaxbUtil;
 import demo.javabean.Event;
-import demo.javabean.EventMsg;
+import demo.javabean.Eventmsg;
 import demo.javabean.Parameter;
 
 public class JaxbTest1 {
 	
 	public static void main(String[] args){
-		EventMsg eventMsg = new EventMsg();
+		Eventmsg eventMsg = new Eventmsg();
 		
 		Event event = new Event();
 		event.setProcessApp("processApp");
 		event.setSnapshot("snapshot");
 		event.setUcaname("ucaname");
+		event.setValue("eventName");
 		
 		Parameter parameter1 = new Parameter();
 		parameter1.setKey("key1");

@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)  
 @XmlRootElement
 @XmlType( propOrder = { "event", "queue", "parameters" })  
-public class EventMsg {
+public class Eventmsg {
 	
     @XmlElement(name = "event")  
 	private Event event;
